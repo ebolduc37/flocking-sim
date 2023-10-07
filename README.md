@@ -19,7 +19,7 @@ We consider a model of self-propelled particles extensively studied in the liter
 \vec{x}_i(t+1) = \vec{x}_i(t) + \vec{v}_i(t),
 ```
 
-where $\Theta$ is a normalization operator $\Theta(\vec{y}) = \vec{y}/\|\vec{y}\|$ that serves to keep the speed fixed at $\|\vec{v}\| = v_0$, and $j \in n_c^i$ means that $j$ belongs to the $n_c$ interacting neighbors of $i$. The distance-dependent force $\vec{f}{ij}$ acts along the direction connecting $i$ and $j$; following ref. 2, if $\vec{e}_{ij}$ is the unit vector between $i$ and $j$, we take
+where $\Theta$ is a normalization operator $\Theta(\vec{y}) = \vec{y} / |\vec{y}|$ that serves to keep the speed fixed at $|\vec{v}| = v_0$, and $j \in n_c^i$ means that $j$ belongs to the $n_c$ interacting neighbors of $i$. The distance-dependent force $\vec{f}_ {ij}$ acts along the direction connecting $i$ and $j$; following ref. 2, if $\vec{e}_ {ij}$ is the unit vector between $i$ and $j$, we take
 
 ```math
 \vec{f}_{ij} (r_{ij} < r_b) = -\infty \vec{e}_{ij},
@@ -31,7 +31,7 @@ where $\Theta$ is a normalization operator $\Theta(\vec{y}) = \vec{y}/\|\vec{y}\
 \vec{f}_{ij} (r_a < r_{ij} < r_0) = \vec{e}_{ij}.
 ```
 
-Finally, $\vec{\eta}_i$ is a random unit vector, independent for each bird and at each moment of time. The parameters $\alpha$ and $\beta$ tune the strength of the alignment and of the cohesion force, respectively; in particular, the strength of alignment is given by $J = v_0 \alpha / n_c$. [...] Parameters were chosen as $r_0 = 1$ (to set the scale of distance), $r_b = 0.2$, $r_e = 0.5$, $r_a = 0.8$, $\alpha = 35$, $\beta = 5$, $v_0 = 0.05$, and we simulated a flock of $N = 512$ birds.
+Finally, $\vec{\eta}_i$ is a random unit vector, independent for each bird and at each moment of time. The parameters $\alpha$ and $\beta$ tune the strength of the alignment and of the cohesion force, respectively \[...\]. Parameters were chosen as $r_0 = 1$ (to set the scale of distance), $r_b = 0.2$, $r_e = 0.5$, $r_a = 0.8$, $\alpha = 35$, $\beta = 5$, $v_0 = 0.05$ \[...\].
 
 ### References
 
