@@ -1,6 +1,6 @@
 # Flocking Simulation
 
-Visualization of emergent collective behavior in a flock simulated on openFrameworks in C++ based on the self-propelled particles model described in [_Statistical mechanics for natural flocks of birds_](https://doi.org/10.1073/pnas.1118633109) (2012) by William Bialek, Andrea Cavagna, Irene Giardina, Thierry Mora, Edmondo Silvestri, Massimiliano Viale, and Aleksandra M. Walczak.
+Visualization of emergent collective behavior through flocking simulated on openFrameworks in C++ based on the self-propelled particles model described in [_Statistical mechanics for natural flocks of birds_](https://doi.org/10.1073/pnas.1118633109) (2012) by William Bialek, Andrea Cavagna, Irene Giardina, Thierry Mora, Edmondo Silvestri, Massimiliano Viale, and Aleksandra M. Walczak.
 
 ### Abstract
 
