@@ -1,10 +1,27 @@
 # Flocking Simulation
 
-Visualization of emergent collective behavior by simulating flocking on openFrameworks in C++ according to the self-propelled particles model described in [ref. 1](#ref).
+This application allows for the visualization of emergent collective behavior by simulating flocking on openFrameworks in C++ according to the self-propelled particles model described in [ref. 1](#ref).
 
 ## openFrameworks Simulation
 
-Bla
+The self-propelled particles model was implemented using [eqs. 1 and 2](#eqs) as described in [ref. 1](#ref).
+
+A flock of $N = 512$ birds is simulated with all parameters initialized according to [ref. 1](#ref), i.e., $n_c = 8$, $r_0 = 1$, $r_b = 0.2$, $r_e = 0.5$, $r_a = 0.8$, $\alpha = 35$, $\beta = 5$, and $v_0 = 0.05$.
+
+| Parameter | Value |
+| --------- | ----- |
+| $n_c$     | 8     |
+| $r_b$     | 0.2   |
+| $r_e$     | 0.5   |
+| $r_a$     | 0.8   |
+| $r_0$     | 1     |
+| $\alpha$  | 35    |
+| $\beta$   | 5     |
+| $v_0$     | 0.05  |
+
+| $n_c$ | $r_b$ | $r_e$ | $r_a$ | $r_0$ | $\alpha$ | $\beta$ | $v_0$ |
+| ----  | ----- | ----- | ----- | ----- | -------- | ------- | ----- |
+| 8     | 0.2   | 0.5   | 0.8   | 0.1   | 35       | 5       | 0.05  |
 
 ## Statistical Mechanics for Natural Flocks of Birds
 
