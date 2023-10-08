@@ -11,26 +11,31 @@ This application allows for the visualization of emergent collective behavior by
 | Variable | Description |
 | :-: | - |
 | <code>NUM_BOIDS</code> | Total number of particles/boids |
-| <code>EDGE_LENGTH</code> | Total number of particles/boids |
-| <code>EDGE_LENGTH_RANDOMIZE</code> | Total number of particles/boids |
+| <code>EDGELENGTH</code> | Edge length |
+| <code>EDGELENGTH_R</code> | Edge length for randomization cube |
+
+### Visualization Parameters
+
+| Variable | Description |
+| :-: | - |
+| <code>FPS</code> | Frames per second |
+| <code>CAM_STEP</code> | Camera position displacement per frame |
+| <code>CAM_POS_INI</code> | Initial camera position |
 
 ### Output Window Parameters
 
 | Variable | Description |
 | :-: | - |
-| <code>SHOW_INFO</code> | Total number of particles/boids |
-| <code>SHOW_COMM</code> | Total number of particles/boids |
-| <code>CAM_POS_INI</code> | Total number of particles/boids |
-| <code>CAM_STEP</code> | Total number of particles/boids |
+| <code>SHOW_INFO</code> | Show/hide information in the output window |
+| <code>SHOW_COMM</code> | Show/hide commands in the output window |
 
-### Data Storage Parameters
+### Data Capture Parameters
 
 | Variable | Description |
 | :-: | - |
-| <code>SAVE</code> | Total number of particles/boids |
-| <code>FILE_NAME</code> | Total number of particles/boids |
-| <code>FPS</code> | Total number of particles/boids |
-| <code>TIME</code> | Total number of particles/boids |
+| <code>SAVE</code> | Save all frames as .jpg files |
+| <code>TIME</code> | Simulation runtime when saving |
+| <code>FILE_NAME</code> | File name prefix for all frames |
 
 ## Commands
 
