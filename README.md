@@ -52,11 +52,10 @@ These parameters control data collection.
 | <code>LEFT</code>/<code>RIGHT</code>                        | Change the interaction range        |
 | <code>ESC</code>                                            | Exit the simulation                 |
 
-## Self-Propelled Particle Model
+## Self-Propelled Particle Model <a id="eqs"/></a>
 
 We consider the self-propelled particles model described in [ref. 1](#ref) and introduce a parameter modulating the noise strength. Each particle moves with vector velocity $\vec{v}_i(t)$ according to the following equations:
 
-<a id="eqs"/></a>
 ```math
 \begin{align}
 \vec{v}_i(t+1) &= v_0 \Theta \left[ \alpha \sum_{j \in n_c^i} \vec{v}_j(t) + \beta \sum_{j \in n_c^i} \vec{f}_{ij} + \gamma n_c \vec{\eta}_i \right] \tag{1} \\[1em]
