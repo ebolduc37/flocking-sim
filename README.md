@@ -1,10 +1,14 @@
 # Flocking Simulation
 
-Visualization of emergent collective behavior by simulating flocking on openFrameworks in C++ according to the self-propelled particles model described in ref. 1.
+Visualization of emergent collective behavior by simulating flocking on openFrameworks in C++ according to the self-propelled particles model described in ref. [1](#ref).
 
-The following section is a selection of relevant excerpts adapted from the 2012 paper by Bialek et al.
+## openFrameworks Simulation
+
+Bla
 
 ## Statistical Mechanics for Natural Flocks of Birds
+
+This section contains a selection of passages from ref. 1 describing the self-propelled particles model used to simulate flocking.
 
 ### Abstract
 
@@ -14,19 +18,21 @@ Flocking is a typical example of emergent collective behavior, where interaction
 
 ### Results
 
-\[...\]
+(. . .)
 
 #### Testing the Mechanistic Interpretation.
 
-\[...\]
+(. . .) As a test, we have simulated a population of self-propelled particles in three dimensions moving according to social forces that tend to align each particle with the average direction of its neighbors, as described by \[eqs. 1 and 2\] in _Materials and Methods_. (. . .) Both the strength and the range of the interaction given by the maximum entropy analysis are proportional to the "microscopic" parameters used in the simulation, although the maximum entropy interaction range $n_c^{mem}$ is roughly $3 \times$ larger than the true number of interacting neighbors, $n_c^{sim}$. We believe that this overestimation is due to the fact that birds (unlike spins) move through the flock, encountering new neighbors before losing memory of the earlier flight directions and in so doing propagate information and correlation more effectively than if they were sitting on a fixed network. In other words, the maximum entropy model, where interactions are static by construction, compensates the dynamical nature of the true interaction network by giving a larger effective value of $n_c$. (. . .) \[The\] observation of $n_c = 21.6$ in the real flocks suggests that the true interactions extend over $n_c = 7.8$, in reasonable agreement with the result from \[refs. 2 and 3\], $n_c = 7.0 \pm 0.6$, using very different methods.
+
+(. . .)
 
 ### Materials and Methods
 
-\[...\]
+(. . .)
 
 #### Self-Propelled Particle Model.
 
-We consider a model of self-propelled particles extensively studied in the literature \[2\]. Each particle moves with vector velocity $\vec{v}_i(t)$ according to the following equations:
+We consider a model of self-propelled particles extensively studied in the literature \[4\]. Each particle moves with vector velocity $\vec{v}_i(t)$ according to the following equations:
 
 ```math
 \begin{align}
@@ -35,7 +41,7 @@ We consider a model of self-propelled particles extensively studied in the liter
 \end{align}
 ```
 
-where $\Theta$ is a normalization operator $\Theta(\vec{y}) = \vec{y} / |\vec{y}|$ that serves to keep the speed fixed at $|\vec{v}| = v_0$, and $j \in n_c^i$ means that $j$ belongs to the $n_c$ interacting neighbors of $i$. The distance-dependent force $\vec{f}_ {ij}$ acts along the direction connecting $i$ and $j$; following ref. 2, if $\vec{e}_ {ij}$ is the unit vector between $i$ and $j$, we take
+where $\Theta$ is a normalization operator $\Theta(\vec{y}) = \vec{y} / |\vec{y}|$ that serves to keep the speed fixed at $|\vec{v}| = v_0$, and $j \in n_c^i$ means that $j$ belongs to the $n_c$ interacting neighbors of $i$. The distance-dependent force $\vec{f}_ {ij}$ acts along the direction connecting $i$ and $j$; following \[ref. 4\], if $\vec{e}_ {ij}$ is the unit vector between $i$ and $j$, we take
 
 ```math
 \begin{align}
@@ -45,10 +51,15 @@ where $\Theta$ is a normalization operator $\Theta(\vec{y}) = \vec{y} / |\vec{y}
 \end{align}
 ```
 
-Finally, $\vec{\eta}_i$ is a random unit vector, independent for each bird and at each moment of time. The parameters $\alpha$ and $\beta$ tune the strength of the alignment and of the cohesion force, respectively; in particular, the strength of alignment is given by $J = v_0 \alpha ∕ n_c$.... Parameters were chosen as $r_0 = 1$ (to set the scale of distance), $r_b = 0.2$, $r_e = 0.5$, $r_a = 0.8$, $\alpha = 35$, $\beta = 5$, $v_0 = 0.05$....
+Finally, $\vec{\eta}_i$ is a random unit vector, independent for each bird and at each moment of time. The parameters $\alpha$ and $\beta$ tune the strength of the alignment and of the cohesion force, respectively; in particular, the strength of alignment is given by $J = v_0 \alpha ∕ n_c$ (. . .). Parameters were chosen as $r_0 = 1$ (to set the scale of distance), $r_b = 0.2$, $r_e = 0.5$, $r_a = 0.8$, $\alpha = 35$, $\beta = 5$, $v_0 = 0.05$. (. . .)
 
-## References
+## <a id="ref" /> References
 
-1. Bialek W, et al. (2012). Statistical mechanics for natural flocks of birds. _Proc Natl Acad Sci_, 109, 4786–4791. doi: [10.1073/pnas.1118633109](https://doi.org/10.1073/pnas.1118633109)
+1. Bialek W, et al. (2012). Statistical mechanics for natural flocks of birds. _Proc Natl Acad Sci USA_, 109, 4786–4791. doi: [10.1073/pnas.1118633109](https://doi.org/10.1073/pnas.1118633109)
 
-2. Grégoire G, Chaté H. (2004). Onset of collective and cohesive motion. _Phys Rev Lett_, 92, 025702. doi: [10.1103/PhysRevLett.92.025702](https://doi.org/10.1103/PhysRevLett.92.025702)
+2. Ballerini M, et al. (2008). Interaction ruling animal collective behavior depends on topological rather than metric distance: Evidence from a field study. _Proc Natl Acad
+Sci USA_, 105, 1232–1237. doi: [0.1073/pnas.0711437105](https://doi.org/10.1073/pnas.0711437105)
+
+3. Cavagna A, et al. (2010). From empirical data to inter-individual interactions: unveiling the rules of collective animal behaviour. _Math Models Methods Appl Sci_, 20, 1491–1510. doi: [10.1142/S0218202510004660](https://doi.org/10.1142/S0218202510004660)
+
+4. Grégoire G, Chaté H. (2004). Onset of collective and cohesive motion. _Phys Rev Lett_, 92, 025702. doi: [10.1103/PhysRevLett.92.025702](https://doi.org/10.1103/PhysRevLett.92.025702)
