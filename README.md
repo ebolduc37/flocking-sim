@@ -34,6 +34,7 @@ Flocking is a typical example of emergent collective behavior, where interaction
 
 We consider a model of self-propelled particles extensively studied in the literature [\[4\]](#ref). Each particle moves with vector velocity $\vec{v}_i(t)$ according to the following equations:
 
+<a id="eqs"/></a>
 ```math
 \begin{align}
 \vec{v}_i(t+1) &= v_0 \Theta \left[ \alpha \sum_{j \in n_c^i} \vec{v}_j(t) + \beta \sum_{j \in n_c^i} \vec{f}_{ij} + n_c \vec{\eta}_i \right] \tag{1} \\[1em]
@@ -43,7 +44,6 @@ We consider a model of self-propelled particles extensively studied in the liter
 
 where $\Theta$ is a normalization operator $\Theta(\vec{y}) = \vec{y} / |\vec{y}|$ that serves to keep the speed fixed at $|\vec{v}| = v_0$, and $j \in n_c^i$ means that $j$ belongs to the $n_c$ interacting neighbors of $i$. The distance-dependent force $\vec{f}_ {ij}$ acts along the direction connecting $i$ and $j$; following [ref. 4](#ref), if $\vec{e}_ {ij}$ is the unit vector between $i$ and $j$, we take
 
-<a id="eqs"/></a>
 ```math
 \begin{align}
 \vec{f}_{ij} (r_{ij} < r_b) &= -\infty \vec{e}_{ij}, \tag{3} \\[1em]
