@@ -2,6 +2,8 @@
 
 This application generates a visualization of emergent collective behavior by simulating a flock of birds on openFrameworks in C++. Flocking is simulated with the self-propelled particles model of [eqs. 1 and 2](#eqs), a modified version of the one described in [ref. 1](#ref). Such particles are also known as _boids_.
 
+https://github.com/ebolduc37/flocking-sim/assets/44382376/46d41d28-8490-43cc-9ef7-f1d97bed97c9
+
 The particles evolve in a system that has periodic boundary conditions such that the unit cell is a cube, which we call the _simulation box_. Each particle moves according to [eqs. 1 and 2](#eqs). They interact with at most a fixed number of their closest neighbors and are subject to an alignment force, a cohesion force, and noise. All model parameters are initialized according to [ref. 1](#ref).
 
 The cohesion force is formulated from a distance-dependent force between interacting neighbors according to [eqs. 3, 4, and 5](#eqs). Interacting neighbors are connected by a line: a red line indicates that there is hard-core repulsion following [eq. 3](#eqs); a blue line indicates that their distance is near an "equilibrium" preferred distance and that the attraction-repulsion force is close to zero following [eq. 4](#eqs); and a green line indicates that the force is constant following [eq. 5](#eqs).
