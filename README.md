@@ -1,6 +1,6 @@
 # Flocking Simulation
 
-This application generates a visualization of emergent collective behavior by simulating a flock of particles, also known as _boids_, on openFrameworks in C++. Flocking is simulated with the self-propelled particles model of [eqs. 1 and 2](#eqs), a modified version of the one described in [ref. 1](#ref).
+This application generates a visualization of emergent collective behavior by simulating a flock of birds on openFrameworks in C++. Flocking is simulated with the self-propelled particles model of [eqs. 1 and 2](#eqs), a modified version of the one described in [ref. 1](#ref). Such particles are also known as _boids_.
 
 The particles evolve in a system that has periodic boundary conditions such that the unit cell is a cube, which we call the _simulation box_. Each particle moves according to [eqs. 1 and 2](#eqs). They interact with at most a fixed number of their closest neighbors and are subject to an alignment force, a cohesion force, and noise. All model parameters are initialized according to [ref. 1](#ref).
 
