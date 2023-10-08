@@ -4,14 +4,42 @@ This application allows for the visualization of emergent collective behavior by
 
 <!--- Mention periodic boundary conditions with unit cell as a cube --->
 
+## Setup Parameters
+
+### Simulation Parameters
+
+| Variable | Description |
+| :-: | - |
+| <code>NUM_BOIDS</code> | Total number of particles/boids |
+| <code>EDGE_LENGTH</code> | Total number of particles/boids |
+| <code>EDGE_LENGTH_RANDOMIZE</code> | Total number of particles/boids |
+
+### Output Window Parameters
+
+| Variable | Description |
+| :-: | - |
+| <code>SHOW_INFO</code> | Total number of particles/boids |
+| <code>SHOW_COMM</code> | Total number of particles/boids |
+| <code>CAM_POS_INI</code> | Total number of particles/boids |
+| <code>CAM_STEP</code> | Total number of particles/boids |
+
+### Data Storage Parameters
+
+| Variable | Description |
+| :-: | - |
+| <code>SAVE</code> | Total number of particles/boids |
+| <code>FILE_NAME</code> | Total number of particles/boids |
+| <code>FPS</code> | Total number of particles/boids |
+| <code>TIME</code> | Total number of particles/boids |
+
 ## Commands
 
 | Key                                                         | Effect                              |
 | :-:                                                         | -                                   |
 | <code>P</code>                                              | Change the look of the simulation   |
 | <code>R</code>                                              | Randomize the position of all boids |
-| <code>W</code>/<code>A</code>/<code>S</code>/<code>D</code> | Rotate the cube                     |
-| <code>Q</code>/<code>E</code>                               | Zoom in/out of the space            |
+| <code>W</code>/<code>A</code>/<code>S</code>/<code>D</code> | Rotate the view                     |
+| <code>Q</code>/<code>E</code>                               | Zoom in/out                         |
 | <code>SPACEBAR</code>                                       | Play/pause the simulation           |
 | <code>UP</code>/<code>DOWN</code>                           | Change the strength of the noise    |
 | <code>LEFT</code>/<code>RIGHT</code>                        | Change the interaction range        |
