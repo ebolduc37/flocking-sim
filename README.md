@@ -1,8 +1,6 @@
 # Flocking Simulation
 
-This application allows for the visualization of emergent collective behavior by simulating a flock of boids on openFrameworks in C++ according to a modified version of the self-propelled particles model described in [ref. 1](#ref).
-
-## openFrameworks Simulation
+This application allows for the visualization of emergent collective behavior by simulating a flock of boids on openFrameworks in C++. Flocking is simulated with the self-propelled particles model of [eqs. 1 and 2](#eqs), which is a modified version of the one described in [ref. 1](#ref).
 
 ## Commands
 
@@ -13,8 +11,8 @@ This application allows for the visualization of emergent collective behavior by
 | <code>W</code>/<code>A</code>/<code>S</code>/<code>D</code> | Rotate the cube                     |
 | <code>Q</code>/<code>E</code>                               | Zoom in/out of the space            |
 | <code>SPACEBAR</code>                                       | Play/pause the simulation           |
-| <code>UP</code>/<code>DOWN</code>                           | Tune the strength of the noise      |
-| <code>LEFT</code>/<code>RIGHT</code>                        | Tune the interaction range          |
+| <code>UP</code>/<code>DOWN</code>                           | Change the strength of the noise    |
+| <code>LEFT</code>/<code>RIGHT</code>                        | Change the interaction range        |
 | <code>ESC</code>                                            | Exit the simulation                 |
 
 ## Self-Propelled Particle Model
@@ -43,11 +41,11 @@ Finally, $\vec{\eta}_i$ is a random unit vector, independent for each bird and a
 
 Additionally, parameters are initialized according to [ref. 1](#ref), i.e.,
 
-| $n_c$ | $r_b$ | $r_e$ | $r_a$ | $r_0$ | $\alpha$ | $\beta$ | $v_0$ |
-| ----  | ----- | ----- | ----- | ----- | -------- | ------- | ----- |
-| 8     | 0.2   | 0.5   | 0.8   | 0.1   | 35       | 5       | 0.05  |
+| $r_b$ | $r_e$ | $r_a$ | $r_0$ | $\alpha$ | $\beta$ | $\gamma$ | $n_c$ | $v_0$ |
+| ----- | ----- | ----- | ----- | -------- | ------- | -------- | ----- | ----- |
+| 0.2   | 0.5   | 0.8   | 0.1   | 35       | 5       | 1        | 8     | 0.05  |
 
-The interaction range $n_c$ and the strength of the noise $\gamma$ can be modified as the simulation is running such that $n_c \in \[0, 32\]$ and $\gamma \in \[0, 2\]$.
+The interaction range $n_c$ and the strength of the noise $\gamma$ can be changed as the simulation is running such that $n_c \in \[0, 32\]$ and $\gamma \in \[0, 2\]$.
 
 ## <a id="ref"/></a> References
 
