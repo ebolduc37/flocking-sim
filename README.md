@@ -59,6 +59,7 @@ These variables control data collection.
 | <code>SAVE</code>      | Save all frames as .jpg files   |
 | <code>TIME</code>      | Simulation runtime when saving  |
 | <code>FILE_NAME</code> | File name prefix for all frames |
+| <code>DIR</code>       | Directory name to save in       |
 
 ## Self-Propelled Particle Model <a id="eqs"/></a>
 
