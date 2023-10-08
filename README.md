@@ -2,24 +2,39 @@
 
 This application generates a visualization of emergent collective behavior by simulating a flock of particles, also known as _boids_, on openFrameworks in C++. Flocking is simulated with the self-propelled particles model of [eqs. 1 and 2](#eqs), a modified version of the one described in [ref. 1](#ref).
 
-The particles evolve in a system that has periodic boundary conditions such that the unit cell is a cube, which we call the _simulation box_. Each particle moves according to [eqs. 1 and 2](#eqs). They interact with at most a fixed number of their closest neighbors and are subject to an alignment force, a cohesion force, and noise. All parameters are initialized according to [ref. 1](#ref).
+The particles evolve in a system that has periodic boundary conditions such that the unit cell is a cube, which we call the _simulation box_. Each particle moves according to [eqs. 1 and 2](#eqs). They interact with at most a fixed number of their closest neighbors and are subject to an alignment force, a cohesion force, and noise. All model parameters are initialized according to [ref. 1](#ref). Additionally, the user can change the interaction range and noise strength while the simulation is running.
 
-## Setup Parameters
+## Commands
 
-These parameters are initialized in the code directly before running the simulation to control the outcome.
+These commands can be used while the simulation is running to change certain aspects in real-time.
 
-### Simulation Parameters
+| Key                                                         | Effect                                  |
+| :---------------------------------------------------------: | --------------------------------------- |
+| <code>UP</code>/<code>DOWN</code>                           | Change the noise strength               |
+| <code>LEFT</code>/<code>RIGHT</code>                        | Change the interaction range            |
+| <code>P</code>                                              | Change the look of the simulation       |
+| <code>R</code>                                              | Randomize the position of all particles |
+| <code>W</code>/<code>A</code>/<code>S</code>/<code>D</code> | Rotate the simulation box               |
+| <code>Q</code>/<code>E</code>                               | Zoom in/out                             |
+| <code>SPACEBAR</code>                                       | Play/pause the simulation               |
+| <code>ESC</code>                                            | Exit the simulation                     |
+
+## Setup Variables
+
+These parameters are initialized in the code before running the simulation to control the structure and outcome.
+
+### Simulation Variables
 
 These parameters control the scope of the simulation.
 
-| Variable               | Description                     |
-| :--------------------: | ------------------------------- |
-| <code>NUM_BOIDS</code> | Total number of particles/boids |
-| <code>LENGTH</code>    | Simulation box length           |
+| Variable               | Description               |
+| :--------------------: | ------------------------- |
+| <code>NUM_BOIDS</code> | Total number of particles |
+| <code>LENGTH</code>    | Simulation box length     |
 
-### Visualization Parameters
+### Visualization Variables
 
-These parameters control the visualization of the simulation in the output window, such that one frame corresponds to one iteration of the self-propelled particles model of [eqs. 1 and 2](#eqs).
+These variables control the visualization of the simulation in the output window, such that one frame corresponds to one iteration of the self-propelled particles model of [eqs. 1 and 2](#eqs).
 
 | Variable                 | Description                                |
 | :----------------------: | ------------------------------------------ |
@@ -29,28 +44,15 @@ These parameters control the visualization of the simulation in the output windo
 | <code>SHOW_INFO</code>   | Show/hide information in the output window |
 | <code>SHOW_COMM</code>   | Show/hide commands in the output window    |
 
-### Data Capture Parameters
+### Data Capture Variables
 
-These parameters control data collection.
+These variables control data collection.
 
 | Variable               | Description                     |
 | :--------------------: | ------------------------------- |
 | <code>SAVE</code>      | Save all frames as .jpg files   |
 | <code>TIME</code>      | Simulation runtime when saving  |
 | <code>FILE_NAME</code> | File name prefix for all frames |
-
-## Commands
-
-| Key                                                         | Effect                              |
-| :---------------------------------------------------------: | ----------------------------------- |
-| <code>P</code>                                              | Change the look of the simulation   |
-| <code>R</code>                                              | Randomize the position of all boids |
-| <code>W</code>/<code>A</code>/<code>S</code>/<code>D</code> | Rotate the view                     |
-| <code>Q</code>/<code>E</code>                               | Zoom in/out                         |
-| <code>SPACEBAR</code>                                       | Play/pause the simulation           |
-| <code>UP</code>/<code>DOWN</code>                           | Change the noise strength           |
-| <code>LEFT</code>/<code>RIGHT</code>                        | Change the interaction range        |
-| <code>ESC</code>                                            | Exit the simulation                 |
 
 ## Self-Propelled Particle Model <a id="eqs"/></a>
 
