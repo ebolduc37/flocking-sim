@@ -1,6 +1,6 @@
 # Flocking Simulation
 
-This application generates a visualization of emergent collective behavior by simulating a flock of birds on openFrameworks in C++. Flocking is simulated with the self-propelled particles model of [eqs. 1 and 2](#eqs), a modified version of the one described in [ref. 1](#ref). Such particles are also known as _boids_.
+This application helps visualize emergent collective behavior by simulating a flock of birds on openFrameworks in C++. Flocking is simulated with the self-propelled particles model of [eqs. 1 and 2](#eqs), a modified version of the one described in [ref. 1](#ref). Such particles are also known as _boids_.
 
 https://github.com/ebolduc37/flocking-sim/assets/44382376/46d41d28-8490-43cc-9ef7-f1d97bed97c9
 
