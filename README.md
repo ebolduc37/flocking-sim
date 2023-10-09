@@ -72,25 +72,23 @@ We consider the self-propelled particles model described in [ref. 1](#ref) and i
 \end{align}
 ```
 
-for which
+where $\Theta$ is a normalization operator $\Theta(\vec{y}) = \vec{y} / |\vec{y}|$ that serves to keep the speed fixed at $|\vec{v}| = v_0$ and the non-normalized vector velocity $\vec{V}_i(t)$ takes the form of
 
 ```math
-\vec{V}_i(t) = \vec{f}_\alpha(t) + \vec{f}_\beta(t) + \vec{f}_\gamma(t), \tag{3}
+\vec{V}_i(t) = \alpha \vec{f}^i_\alpha(t) + \beta \vec{f}^i_\beta(t) + \gamma \vec{f}^i_\gamma(t), \tag{3}
 ```
 
-```math
-\vec{V}_i(t) = \alpha \sum_{j \in n_c^i} \vec{v}_j(t) + \beta \sum_{j \in n_c^i} \vec{f}_{ij} + \gamma n_c \vec{\eta}_i, \tag{3}
-```
+where the alignment force $\vec{f}^i_\alpha(t)$, the cohesion force $\vec{f}^i_\beta(t)$, and the noise $\vec{f}^i_\gamma(t)$ are described by
 
 ```math
 \begin{align}
-\vec{f}_\alpha(t) &= \alpha \sum_{j \in n_c^i} \vec{v}_j(t) \tag{4} \\
-\vec{f}_\beta(t) &= \beta \sum_{j \in n_c^i} \vec{f}_{ij} \tag{5} \\
-\vec{f}_\gamma(t) &= \gamma n_c \vec{\eta}_i \tag{6}
+\vec{f}^i_\alpha(t) &= \sum_{j \in n_c^i} \vec{v}_j(t) \tag{4} \\
+\vec{f}^i_\beta(t) &= \sum_{j \in n_c^i} \vec{f}_{ij} \tag{5} \\
+\vec{f}^i_\gamma(t) &= n_c \vec{\eta}_i \tag{6}
 \end{align}
 ```
 
-where $\Theta$ is a normalization operator $\Theta(\vec{y}) = \vec{y} / |\vec{y}|$ that serves to keep the speed fixed at $|\vec{v}| = v_0$, and $j \in n_c^i$ means that $j$ belongs to the $n_c$ interacting neighbors of $i$. The distance-dependent force $\vec{f}_ {ij}$ acts along the direction connecting $i$ and $j$; following [ref. 2](#ref), if $\vec{e}_ {ij}$ is the unit vector between $i$ and $j$, we take
+where $j \in n_c^i$ means that $j$ belongs to the $n_c$ interacting neighbors of $i$. The distance-dependent force $\vec{f}_ {ij}$ acts along the direction connecting $i$ and $j$; following [ref. 2](#ref), if $\vec{e}_ {ij}$ is the unit vector between $i$ and $j$, we take
 
 ```math
 \begin{align}
