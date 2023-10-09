@@ -14,16 +14,16 @@ Additionally, the user can change the interaction range and noise strength while
 
 These commands can be used while the simulation is running to change certain aspects in real-time.
 
-| Key                                                         | Effect                                  |
-| :---------------------------------------------------------: | --------------------------------------- |
-| <code>UP</code>/<code>DOWN</code>                           | Change the noise strength               |
-| <code>LEFT</code>/<code>RIGHT</code>                        | Change the interaction range            |
-| <code>P</code>                                              | Change the look of the simulation       |
-| <code>R</code>                                              | Randomize the position of all particles |
-| <code>W</code>/<code>A</code>/<code>S</code>/<code>D</code> | Rotate the simulation box               |
-| <code>Q</code>/<code>E</code>                               | Zoom in/out                             |
-| <code>SPACEBAR</code>                                       | Play/pause the simulation               |
-| <code>ESC</code>                                            | Exit the simulation                     |
+| Key             | Effect                                  |
+| :-------------: | --------------------------------------- |
+| `UP`/`DOWN`     | Change the noise strength               |
+| `LEFT`/`RIGHT`  | Change the interaction range            |
+| `P`             | Change the look of the simulation       |
+| `R`             | Randomize the position of all particles |
+| `W`/`A`/`S`/`D` | Rotate the simulation box               |
+| `Q`/`E`         | Zoom in/out                             |
+| `SPACEBAR`      | Play/pause the simulation               |
+| `ESC`           | Exit the simulation                     |
 
 ## Setup Variables
 
@@ -33,33 +33,33 @@ These parameters are initialized in the code before running the simulation to co
 
 These parameters control the scope of the simulation.
 
-| Variable               | Description               |
-| :--------------------: | ------------------------- |
-| <code>NUM_BOIDS</code> | Total number of particles |
-| <code>LENGTH</code>    | Simulation box length     |
+| Variable    | Description               |
+| :---------: | ------------------------- |
+| `NUM_BOIDS` | Total number of particles |
+| `LENGTH`    | Simulation box length     |
 
 ### Visualization Variables
 
 These variables control the visualization of the simulation in the output window, such that one frame corresponds to one iteration of the self-propelled particles model of [eqs. 1 and 2](#eqs).
 
-| Variable                 | Description                                |
-| :----------------------: | ------------------------------------------ |
-| <code>FPS</code>         | Frames per second                          |
-| <code>CAM_STEP</code>    | Camera position displacement per frame     |
-| <code>CAM_POS_INI</code> | Initial camera position                    |
-| <code>SHOW_INFO</code>   | Show/hide information in the output window |
-| <code>SHOW_COMM</code>   | Show/hide commands in the output window    |
+| Variable      | Description                                |
+| :-----------: | ------------------------------------------ |
+| `FPS`         | Frames per second                          |
+| `CAM_STEP`    | Camera position displacement per frame     |
+| `CAM_POS_INI` | Initial camera position                    |
+| `SHOW_INFO`   | Show/hide information in the output window |
+| `SHOW_COMM`   | Show/hide commands in the output window    |
 
 ### Data Capture Variables
 
 These variables control data collection.
 
-| Variable               | Description                     |
-| :--------------------: | ------------------------------- |
-| <code>SAVE</code>      | Save all frames as .jpg files   |
-| <code>TIME</code>      | Simulation runtime when saving  |
-| <code>FILE_NAME</code> | File name prefix for all frames |
-| <code>DIR</code>       | Directory name to save in       |
+| Variable    | Description                     |
+| :---------: | ------------------------------- |
+| `SAVE`      | Save all frames as .jpg files   |
+| `TIME`      | Simulation runtime when saving  |
+| `FILE_NAME` | File name prefix for all frames |
+| `DIR`       | Directory name to save in       |
 
 ## Self-Propelled Particle Model <a id="eqs"/></a>
 
