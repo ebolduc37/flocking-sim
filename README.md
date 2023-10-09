@@ -66,17 +66,27 @@ These variables control data collection.
 We consider the self-propelled particles model described in [ref. 1](#ref) and introduce a parameter modulating the noise strength. Each particle moves with vector velocity $\vec{v}_i(t)$ according to the following equations:
 
 ```math
-\begin{gather}
-\vec{v}_i(t+1) = v_0 \Theta \left[ \vec{f}_\alpha(t) + \vec{f}_\beta(t) + \vec{f}_\gamma(t) \right] \tag{1} \\
-\vec{x}_i(t+1) = \vec{x}_i(t) + \vec{v}_i(t), \tag{2}
-\end{gather}
+\begin{align}
+\vec{v}_i(t+1) &= v_0 \Theta \left[ \vec{V}_i(t) \right] \tag{1} \\
+\vec{x}_i(t+1) &= \vec{x}_i(t) + \vec{v}_i(t), \tag{2}
+\end{align}
+```
+
+for which
+
+```math
+\vec{V}_i(t) = \vec{f}_\alpha(t) + \vec{f}_\beta(t) + \vec{f}_\gamma(t), \tag{3}
+```
+
+```math
+\vec{V}_i(t) = \alpha \sum_{j \in n_c^i} \vec{v}_j(t) + \beta \sum_{j \in n_c^i} \vec{f}_{ij} + \gamma n_c \vec{\eta}_i, \tag{3}
 ```
 
 ```math
 \begin{align}
-\alpha \sum_{j \in n_c^i} \vec{v}_j(t) \\
-\beta \sum_{j \in n_c^i} \vec{f}_{ij} \\
-\gamma n_c \vec{\eta}_i
+\vec{f}_\alpha(t) &= \alpha \sum_{j \in n_c^i} \vec{v}_j(t) \tag{4} \\
+\vec{f}_\beta(t) &= \beta \sum_{j \in n_c^i} \vec{f}_{ij} \tag{5} \\
+\vec{f}_\gamma(t) &= \gamma n_c \vec{\eta}_i \tag{6}
 \end{align}
 ```
 
