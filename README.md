@@ -66,10 +66,18 @@ These variables control data collection.
 We consider the self-propelled particles model described in [ref. 1](#ref) and introduce a parameter modulating the noise strength. Each particle moves with vector velocity $\vec{v}_i(t)$ according to the following equations:
 
 ```math
-\vec{v}_i(t+1) = v_0 \Theta \left[ \alpha \sum_{j \in n_c^i} \vec{v}_j(t) + \beta \sum_{j \in n_c^i} \vec{f}_{ij} + \gamma n_c \vec{\eta}_i \right] \tag{1}
+\begin{align}
+\vec{v}_i(t+1) & = v_0 \Theta \left[ \alpha \vec{v}_\alpha(t) + \beta \vec{v}_\beta(t) + \gamma \vec{v}_\gamma(t) \right] \tag{1} \\
+\vec{x}_i(t+1) & = \vec{x}_i(t) + \vec{v}_i(t), \tag{2}
+\end{align}
 ```
+
 ```math
-\vec{x}_i(t+1) = \vec{x}_i(t) + \vec{v}_i(t), \tag{2}
+\begin{align}
+\sum_{j \in n_c^i} \vec{v}_j(t) \\
+\sum_{j \in n_c^i} \vec{f}_{ij} \\
+n_c \vec{\eta}_i
+\end{align}
 ```
 
 where $\Theta$ is a normalization operator $\Theta(\vec{y}) = \vec{y} / |\vec{y}|$ that serves to keep the speed fixed at $|\vec{v}| = v_0$, and $j \in n_c^i$ means that $j$ belongs to the $n_c$ interacting neighbors of $i$. The distance-dependent force $\vec{f}_ {ij}$ acts along the direction connecting $i$ and $j$; following [ref. 2](#ref), if $\vec{e}_ {ij}$ is the unit vector between $i$ and $j$, we take
