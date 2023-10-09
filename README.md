@@ -66,10 +66,10 @@ These variables control data collection.
 We consider the self-propelled particles model described in [ref. 1](#ref) and introduce a parameter modulating the noise strength. Each particle moves with vector velocity $\vec{v}_i(t)$ according to the following equations:
 
 ```math
-\begin{align}
-\vec{v}_i(t+1) & = v_0 \Theta \left[ \vec{f}_\alpha(t) + \vec{f}_\beta(t) + \vec{f}_\gamma(t) \right] \tag{1} \\
-\vec{x}_i(t+1) & = \vec{x}_i(t) + \vec{v}_i(t), \tag{2}
-\end{align}
+\begin{gather}
+\vec{v}_i(t+1) = v_0 \Theta \left[ \vec{f}_\alpha(t) + \vec{f}_\beta(t) + \vec{f}_\gamma(t) \right] \tag{1} \\
+\vec{x}_i(t+1) = \vec{x}_i(t) + \vec{v}_i(t), \tag{2}
+\end{gather}
 ```
 
 ```math
