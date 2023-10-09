@@ -6,7 +6,7 @@ https://github.com/ebolduc37/flocking-sim/assets/44382376/46d41d28-8490-43cc-9ef
 
 The particles evolve in a system that has periodic boundary conditions such that the unit cell is a cube, which we call the _simulation box_. Each particle moves according to [eqs. 1 and 2](#eqs). They interact with at most a fixed number of their closest neighbors and are subject to an alignment force, a cohesion force, and noise. All model parameters are initialized according to [ref. 1](#ref).
 
-The cohesion force is formulated from a distance-dependent force between interacting neighbors according to [eqs. 3, 4, and 5](#eqs). Interacting neighbors are connected by a line: a red line indicates that there is hard-core repulsion following [eq. 3](#eqs); a blue line indicates that their distance is near an "equilibrium" preferred distance and that the attraction-repulsion force is close to zero following [eq. 4](#eqs); and a green line indicates that the force is constant following [eq. 5](#eqs).
+The cohesion force is formulated from a distance-dependent force between interacting neighbors according to [eqs. 7, 8, and 9](#eqs). Interacting neighbors are connected by a line: a red line indicates that there is hard-core repulsion following [eq. 7](#eqs); a blue line indicates that their distance is near an "equilibrium" preferred distance and that the attraction-repulsion force is close to zero following [eq. 8](#eqs); and a green line indicates that the force is constant following [eq. 9](#eqs).
 
 Additionally, the user can change the interaction range and noise strength while the simulation is running.
 
@@ -72,7 +72,7 @@ We consider the self-propelled particles model described in [ref. 1](#ref) and i
 \end{align}
 ```
 
-where $\Theta$ is a normalization operator $\Theta(\vec{y}) = \vec{y} / |\vec{y}|$ that serves to keep the speed fixed at $|\vec{v}| = v_0$ and the non-normalized vector velocity $\vec{V}_i(t)$ takes the form of
+where $\Theta$ is a normalization operator $\Theta(\vec{y}) = \vec{y} / |\vec{y}|$ that serves to keep the speed fixed at $|\vec{v}| = v_0$ and the non-normalized vector velocity $\vec{V}_i(t)$ is decomposed as
 
 ```math
 \vec{V}_i(t) = \alpha \vec{f}^i_\alpha(t) + \beta \vec{f}^i_\beta(t) + \gamma \vec{f}^i_\gamma(t), \tag{3}
@@ -92,9 +92,9 @@ where $j \in n_c^i$ means that $j$ belongs to the $n_c$ interacting neighbors of
 
 ```math
 \begin{align}
-\vec{f}_{ij} (r_{ij} < r_b) &= -\infty \vec{e}_{ij}, \tag{3} \\[1em]
-\vec{f}_{ij} (r_b < r_{ij} < r_a) &= \frac{1}{4} \cdot \frac{r_{ij}-r_e}{r_a-r_e} \vec{e}_{ij}, \tag{4} \\[0.5em]
-\vec{f}_{ij} (r_a < r_{ij} < r_0) &= \vec{e}_{ij}. \tag{5}
+\vec{f}_{ij} (r_{ij} < r_b) &= -\infty \vec{e}_{ij}, \tag{7} \\[1em]
+\vec{f}_{ij} (r_b < r_{ij} < r_a) &= \frac{1}{4} \cdot \frac{r_{ij}-r_e}{r_a-r_e} \vec{e}_{ij}, \tag{8} \\[0.5em]
+\vec{f}_{ij} (r_a < r_{ij} < r_0) &= \vec{e}_{ij}. \tag{9}
 \end{align}
 ```
 
