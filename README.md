@@ -67,16 +67,16 @@ We consider the self-propelled particles model described in [ref. 1](#ref) and i
 
 ```math
 \begin{align}
-\vec{v}_i(t+1) & = v_0 \Theta \left[ \alpha \vec{v}_\alpha(t) + \beta \vec{v}_\beta(t) + \gamma \vec{v}_\gamma(t) \right] \tag{1} \\
+\vec{v}_i(t+1) & = v_0 \Theta \left[ \vec{f}_\alpha(t) + \vec{f}_\beta(t) + \vec{f}_\gamma(t) \right] \tag{1} \\
 \vec{x}_i(t+1) & = \vec{x}_i(t) + \vec{v}_i(t), \tag{2}
 \end{align}
 ```
 
 ```math
 \begin{align}
-\sum_{j \in n_c^i} \vec{v}_j(t) \\
-\sum_{j \in n_c^i} \vec{f}_{ij} \\
-n_c \vec{\eta}_i
+\alpha \sum_{j \in n_c^i} \vec{v}_j(t) \\
+\beta \sum_{j \in n_c^i} \vec{f}_{ij} \\
+\gamma n_c \vec{\eta}_i
 \end{align}
 ```
 
