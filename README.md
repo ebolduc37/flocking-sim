@@ -108,6 +108,8 @@ Additionally, parameters are initialized according to [ref. 1](#ref), i.e., as l
 
 | Parameter | Value  |
 | :-------: | :----: |
+| $n_c$     | $8$    |
+| $v_0$     | $0.05$ |
 | $r_b$     | $0.2$  |
 | $r_e$     | $0.5$  |
 | $r_a$     | $0.8$  |
@@ -115,8 +117,6 @@ Additionally, parameters are initialized according to [ref. 1](#ref), i.e., as l
 | $\alpha$  | $35$   |
 | $\beta$   | $5$    |
 | $\gamma$  | $1$    |
-| $n_c$     | $8$    |
-| $v_0$     | $0.05$ |
 
 The interaction range $n_c$ and the strength of the noise $\gamma$ can be changed as the simulation is running such that $n_c \in \[0, 32\]$ and $\gamma \in \[0, 2\]$.
 
